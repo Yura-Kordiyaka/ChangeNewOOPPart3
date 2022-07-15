@@ -27,4 +27,9 @@ while True:
         f = userApp.search_by(search_str, what_to_search)
     #   search_by(search_str, what_to_search)
     elif menu_flag == 4:
-        f = userApp.update_user()
+        id = int(input("Type id of user which you want to update: "))
+        first_name = input("First Name: ")
+        last_name = input("Last Name: ")
+        email = input("Email: ")
+        f = userApp(first_name, last_name, email)
+        f.update_user(id)
